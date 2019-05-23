@@ -1,0 +1,80 @@
+#include <iostream> 
+#include <cstdlib> 
+#include<iomanip> 
+  
+using namespace std; 
+  
+void displaymenu()
+{ 
+//this will show the choices
+cout<<"1. Add"<<endl; 
+cout<<"2. Subtract"<<endl; 
+cout<<"3. Multiply"<<endl; 
+cout<<"4. Divide"<<endl; 
+cout<<"5. Modulus"<<endl; 
+}
+
+//the functions 
+int Add(int a,int b)
+{ 
+    return(a+b); 
+} 
+  
+int Substract(int a, int b)
+{ 
+    return(a-b); 
+} 
+  
+int Multiply(int a, int b)
+{ 
+    return(a*b); 
+} 
+float Divide(int a,int b)
+{ 
+      return(a/b); 
+} 
+int Modulus(int a, int b)
+{ 
+    return(a%b); 
+} 
+  
+int main(int argc, char *argv[]) 
+{ 
+	//declarations 
+	displaymenu(); 
+	int choice; 
+	int a; 
+	int b; 
+	char confirm; 
+	do 
+{ 
+	//descriptions
+	cout<<"Choose from 1-5:"; 
+	cin>>choice; 
+	cout<<"Enter two numbers:"; 
+	cin>>a>>b; 
+	cout<<"\n"; 
+	
+	switch(choice)
+	{	 
+ 	case 1:cout<<"ANSWER:"<<Add(a,b);
+	 break; 
+ 	case 2:cout<<"ANSWER:"<<Substract(a,b);
+	 break; 
+ 	case 3:cout<<"ANSWER:"<<Multiply(a,b);
+	 break; 
+ 	case 4:cout<<"ANSWER:"<<Divide(a,b);
+	 break; 
+ 	case 5:cout<<"ANSWER:"<<Modulus(a,b);
+	 break; 
+ 	default:cout<<"invalid"; 
+     } 
+	cout<< end;                  
+	cout<<"Press y or Y to continue:"; 
+    cin>>confirm; 
+	}
+	while(confirm=='y'||confirm=='Y'); 
+
+
+   return EXIT_SUCCESS; 
+}
