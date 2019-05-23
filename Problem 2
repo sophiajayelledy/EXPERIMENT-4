@@ -1,0 +1,40 @@
+//Bubble sort
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+//declarations
+	int num[5];
+	int i,j;
+	
+//loops
+	for(i=0;i<5;i++)
+	{
+	cout<<"Please enter a number: "<<endl;
+	cin>>num[i];		
+	}
+	
+	for(i=0;i<4;i++)
+	{
+		for(j=i+1;j<5;j++)
+		{
+			int temp;
+			
+			if (num[i]>num[j])
+			{
+				temp= num[i];
+				num[i]=num[j];
+				num[j]=temp;
+			}
+		}
+	}
+	cout<<endl;
+	for(i=0;i<5;i++)
+	{
+		cout<<num[i]<<endl;
+	}
+	
+return 0;	
+}
